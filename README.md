@@ -1,36 +1,22 @@
-# fpg (Fastpush-Git)
+# fpamg (Fast-pull-and-merge-git)
 
-fpg is a command-line tool that simplifies the process of pushing changes to a Git repository. It combines the commands `git add .`, `git commit -m "<message>"`, and `git push` into a single command for faster and more convenient usage.
+fpamg is a command-line tool designed to streamline the process of updating your current feature branch from the main/master/dev, or any other default branch of your project. It combines multiple steps into a single command. First, it switches to the default branch (main/master/dev) of your project, then pulls the latest changes, switches back to your feature branch, and finally merges the updates from the default branch into your feature branch. With fpamg, developers can effortlessly stay up to date with the default branch in their feature branch, reducing the complexity of manual steps involved.
 
 ## Installation
 
-To install fpg globally on your system, you can use npm:
+To install fpamg globally on your system, you can use npm:
 
 ```bash
-npm install -g fastpush-git
+npm install -g fast-pull-and-merge-git
 ```
 
 ## Usage
 
-Once fpg is installed, you can use it in any Git repository. Simply navigate to the root of your repository in the terminal and run the following command:
+Once fpamg is installed, you can use it in any Git repository. When you are in your feature branch, simply type the command in your terminal.
 
 ```bash
-fpg "<commit message>"
+fpamg
 ```
-
-Replace <commit message> with a descriptive message for your commit.
-
-The fpg command will automatically stage all changes in the repository, create a new commit with the specified message, and push the changes to the remote repository.
-
-## Example
-
-Here's an example of how you can use fpg:
-
-```bash
-fpg "Added new feature"
-```
-
-This will stage all changes, create a new commit with the message "Added new feature", and push the changes to the remote repository.
 
 ## License
 
