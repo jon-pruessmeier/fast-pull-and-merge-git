@@ -1,4 +1,4 @@
-//const { execAsync } = require("child_process");
+#!/usr/bin/env node
 
 const { exec } = require('child_process')
 const { promisify } = require('util')
@@ -62,7 +62,6 @@ async function pullAndMerge() {
   console.log(`Switching to branch: ${currentBranch}`)
   await execAsync(`git switch ${currentBranch}`)
 
-  
   console.log(`Merging ${mainBranch} into ${currentBranch}`)
   await execAsync(`git merge ${mainBranch}`)
 }
